@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "username": "testUser",
+    "email": "test@example.com",
+    "password": "$2b$10$...",
+    "role": "user"
+  },
+  {
+    "id": 2,
+    "username": "newUser",
+    "email": "newuser@example.com",
+    "password": "$2b$10$bLCsUYfo5m4Tsukpfrwdme2cJg1Cn1Qpyd/cfJa0xFsmOGoUTMqJq",
+    "role": "user"
+  },
+  {
+    "id": 3,
+    "username": "akshatzeta",
+    "email": "test@g.com",
+    "password": "$2b$10$F4s0C2Mptt8qCanafKLYP.xLc/iIWXpZNMCVpS6xyF7kIcWOctwcO",
+    "role": "user"
+  }
+]
