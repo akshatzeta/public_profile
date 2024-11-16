@@ -19,7 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/form" element={<SignupForm />} />
           
-          {/* Protect all other routes with PrivateRoute */}
+          {/* Private protected routes */}
           <Route path="/" element={<PrivateRoute element={<Home />} />} />
           <Route path="/profile/:id" element={<PrivateRoute element={<Page />} />} />
           <Route path="/home" element={<PrivateRoute element={<Home />} />} />

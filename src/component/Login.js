@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false); // State to track admin selection
+  const [isAdmin, setIsAdmin] = useState(false); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -30,9 +30,9 @@ const Login = () => {
 
         // Save token to local storage
         localStorage.setItem("authToken", data.token);
-        localStorage.setItem("isAdmin", isAdmin); // Save admin state (optional)
+        localStorage.setItem("isAdmin", isAdmin); 
 
-        // Navigate based on the role or successful admin login
+     
         if (isAdmin) {
           navigate("/admin");
         } else {
@@ -51,7 +51,7 @@ const Login = () => {
     <div className="login-form p-8 max-w-md mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
 
-      {/* Role Selector */}
+     
       <div className="flex justify-center mb-6">
         <div className="flex bg-gray-300 p-1 rounded-full shadow-md">
           <label

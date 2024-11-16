@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -18,7 +17,7 @@ app.use(bodyParser.json());
 
 app.use('/api/auth', authRoutes, adminAuthRoutes);
 app.use('/api/profiles', profileRoutes);
- // Change the route to make sure it doesn't conflict
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

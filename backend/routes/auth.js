@@ -1,4 +1,4 @@
-// routes/auth.js
+
 const express = require('express');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
@@ -11,7 +11,7 @@ const adminFilePath = path.join(__dirname, '../data/admin.json');
 
 const secretKey = 'your_secret_key';
 
-// Signup route
+
 router.post('/signup', async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -44,7 +44,6 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// Login route
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -82,7 +81,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Verify route (for protected routes)
+
 router.get('/verify', (req, res) => {
   const token = req.headers['authorization'];
 

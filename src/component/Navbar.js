@@ -11,7 +11,7 @@ const Navbar = () => {
   const toggleSearchBar = () => setIsSearchOpen((prev) => !prev);
 
   useEffect(() => {
-    // Fetch profiles from the API or a static JSON file
+    
     const fetchProfiles = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/profiles"); // Update this URL to your actual API endpoint
@@ -24,14 +24,14 @@ const Navbar = () => {
     fetchProfiles();
   }, []);
 
-  // Filter profiles based on the search query
+  
   const filteredProfiles = profiles.filter(
     (profile) =>
       (profile.name && profile.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
       (profile.description && profile.description.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
-  // Handle selecting an item
+  
   const handleSelectItem = (item) => {
     if (selectedItems.some((selected) => selected.id === item.id)) {
       setSelectedItems((prev) =>

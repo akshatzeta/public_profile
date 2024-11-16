@@ -6,7 +6,7 @@ const AdminDashboard = () => {
   const [pendingProfiles, setPendingProfiles] = useState([]);
 
   useEffect(() => {
-    // Fetch profiles and pending profiles on load
+    
     const fetchProfiles = async () => {
       try {
         const [profilesRes, pendingRes] = await Promise.all([
@@ -28,14 +28,14 @@ const AdminDashboard = () => {
     try {
       const profileToApprove = pendingProfiles.find((profile) => profile.id === id);
       if (profileToApprove) {
-        // Add to main profiles
+       
         const updatedProfiles = [...profiles, profileToApprove];
         setProfiles(updatedProfiles);
 
-        // Call API to approve profile
+        /
         await axios.post(`http://localhost:5000/api/profiles/approve/${profileToApprove.id}`);
 
-        // Remove from pending profiles
+        
         const updatedPendingProfiles = pendingProfiles.filter((profile) => profile.id !== id);
         setPendingProfiles(updatedPendingProfiles);
       } else {
@@ -71,7 +71,7 @@ const AdminDashboard = () => {
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10">
         {profiles.map((profile) => (
           <div
-            key={profile.id} // Using ID provided by the server
+            key={profile.id} 
             className="border rounded-lg shadow-lg p-4 bg-white hover:shadow-xl transition-shadow"
           >
             <img
@@ -90,7 +90,7 @@ const AdminDashboard = () => {
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {pendingProfiles.map((profile) => (
           <div
-            key={profile.id} // Using ID provided by the server
+            key={profile.id} 
             className="border rounded-lg shadow-lg p-4 bg-white hover:shadow-xl transition-shadow"
           >
             <img
@@ -102,7 +102,7 @@ const AdminDashboard = () => {
             <p className="text-gray-600 text-center">{profile.description}</p>
             <div className="flex justify-between mt-4">
               <button
-                onClick={() => approveProfile(profile.id)} // Profile ID comes from the server
+                onClick={() => approveProfile(profile.id)} 
                 className="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600"
               >
                 Approve
