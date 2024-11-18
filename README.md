@@ -1,4 +1,4 @@
-# Project Name
+# Public Profile
 
 ## Overview
 This project allows users to sign up and fill out a form that needs admin approval. Once approved, the user can log in and view their profile. Admins can approve or reject user submissions via the Admin Dashboard.
